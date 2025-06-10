@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Blog Dashboard App | Next.js Blog CMS + Public Blog UI
 
-## Getting Started
+A modern, responsive blog platform built with **Next.js App Router**, featuring a **public blog** and an **admin dashboard** with post creation, editing, deletion, and pagination. The app uses a clean UI powered by **Tailwind CSS**, with enhanced UX elements like tooltips, icons, and responsive design.
 
-First, run the development server:
+![Banner](./public/demo.jpg)
 
+---
+
+## Live Demo
+
+[Click here to view the live demo](https://blog-dashboard-app.vercel.app/)
+---
+
+---
+
+## Features
+
+### Public Blog
+- View blog posts with titles and excerpts
+- Responsive card design
+- Link to full post details
+- Optimized image loading with `next/image`
+
+### Admin Dashboard
+- Create, edit, delete posts
+- Rich text editor support
+- Pagination for easy navigation
+- Reusable UI components
+- Edit/Delete buttons with tooltips & icons
+- Responsive layout, mobile-friendly
+
+---
+
+
+
+### Steps to Install and Run the Project
+
+1. Clone the repository:
+git clone ttps://github.com/rizwanbinnawaz/blog-dashboard-app.git
+cd blog-dashboard-app
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run project:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+4. build project:
+```bash
+npm run build
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js 15+ (App Router)**
+- **React Hook Form**
+- **React Query (TanStack Query)**
+- **Tailwind CSS**
+- **Lucide Icons**
+- **TypeScript**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## API Source
+```bash
+https://jsonplaceholder.typicode.com/posts
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+### Author Details:
+
+**Muhammad Rizwan** 
+
+Email: rizwanbinnawaz@gmail.com
+
+Phone: +971525571270
+
+Senior Developer | React | Next.js  
+
+Based in Dubai
