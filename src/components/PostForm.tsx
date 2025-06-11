@@ -61,3 +61,4 @@ export function PostForm({ initialValues, onSubmit, isEditing, isSubmitting }: P
       )}
     </form>
   )
+}

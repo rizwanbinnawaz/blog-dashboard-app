@@ -18,7 +18,7 @@ interface PostItemProps {
 
 export function PostItem({ id, title, body, onEdit, onDelete, isDeleting }: PostItemProps) {
   return (
-    <TooltipProvider>
+    <TooltipProvider key={id}>
       <li className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4">
         <div className="flex-1">
           <h2 className="text-rose-600 font-semibold text-lg line-clamp-1 mb-1">{title}</h2>

@@ -15,6 +15,12 @@ interface FormValues {
   body: string
 }
 
+interface Post {
+  id: number
+  title: string
+  body: string
+}
+
 export default function AdminPage() {
 const { data: posts = [], isLoading: isLoadingPosts } = usePosts()
   const createPost = useCreatePost()
@@ -27,26 +33,19 @@ const { data: posts = [], isLoading: isLoadingPosts } = usePosts()
   const currentPosts = posts.slice(startIndex, startIndex + POSTS_PER_PAGE)
 
   const { reset } = useForm<FormValues>()
-  const [editorContent, setEditorContent] = useState('')
   const [editPostId, setEditPostId] = useState<number | null>(null)
-  const [deletingPostId, setDeletingPostId] = useState<number | null>(null)
 
   const handleDelete = (id: number) => {
-    setDeletingPostId(id)
-    deletePost.mutate(id, {
-      onSettled: () => setDeletingPostId(null),
-    })
+    deletePost.mutate(id)
   }
 
-  const editPost = posts.find((p:any) => p.id === editPostId) || null
+  const editPost = posts.find((p:Post) => p.id === editPostId) || null
 
   useEffect(() => {
     if (editPost) {
       reset({ title: editPost.title, body: editPost.body })
-      setEditorContent(editPost.body)
     } else {
       reset({ title: '', body: '' })
-      setEditorContent('')
     }
   }, [editPost, reset])
 
@@ -57,7 +56,6 @@ const { data: posts = [], isLoading: isLoadingPosts } = usePosts()
       createPost.mutate({ title: data.title, body: data.body })
     }
     reset()
-    setEditorContent('')
     setEditPostId(null)
   }
 
@@ -80,7 +78,7 @@ const { data: posts = [], isLoading: isLoadingPosts } = usePosts()
         </div>
       ) : (
         <ul className="space-y-4">
-          {currentPosts.map((post:any) => (
+          {currentPosts.map((post:Post) => (
             <PostItem
               key={post.id}
               id={post.id}

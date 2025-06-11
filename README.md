@@ -2,14 +2,14 @@
 
 A modern, responsive blog platform built with **Next.js App Router**, featuring a **public blog** and an **admin dashboard** with post creation, editing, deletion, and pagination. The app uses a clean UI powered by **Tailwind CSS**, with enhanced UX elements like tooltips, icons, and responsive design.
 
-![Banner](./public/demo.jpg)
-
 ---
 
 ## Live Demo
 
 [Click here to view the live demo](https://blog-dashboard-app.vercel.app/)
----
+
+
+![Banner](./public/demo.jpg)
 
 ---
 

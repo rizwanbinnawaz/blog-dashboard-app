@@ -37,7 +37,7 @@ export default function Home() {
         ) : (
           <>
             <ul className="space-y-4">
-              {currentPosts.map((post: any) => (
+              {currentPosts.map((post: Post) => (
                 <PostList 
                   key={post.id}
                   id={post.id}
