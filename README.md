@@ -7,7 +7,7 @@ A modern, responsive blog platform built with **Next.js App Router**, featuring 
 ## Live Demo
 
 [Click here to view the live demo](https://blog-dashboard-app.vercel.app/)
-
+---
 
 ![Banner](./public/demo.jpg)
 
