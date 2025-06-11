@@ -36,7 +36,7 @@ A modern, responsive blog platform built with **Next.js App Router**, featuring 
 ### Steps to Install and Run the Project
 
 1. Clone the repository:
-git clone ttps://github.com/rizwanbinnawaz/blog-dashboard-app.git
+git clone https://github.com/rizwanbinnawaz/blog-dashboard-app.git
 cd blog-dashboard-app
 
 2. Install dependencies:
