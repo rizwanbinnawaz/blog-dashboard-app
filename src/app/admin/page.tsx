@@ -28,15 +28,21 @@ const { data: posts = [], isLoading: isLoadingPosts } = usePosts()
   const deletePost = useDeletePost()
 
   const [currentPage, setCurrentPage] = useState(1)
+  const [editPostId, setEditPostId] = useState<number | null>(null)
+  const [deletingPostId, setDeletingPostId] = useState<number | null>(null)
+
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE)
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE
   const currentPosts = posts.slice(startIndex, startIndex + POSTS_PER_PAGE)
 
   const { reset } = useForm<FormValues>()
-  const [editPostId, setEditPostId] = useState<number | null>(null)
+  
 
   const handleDelete = (id: number) => {
-    deletePost.mutate(id)
+    setDeletingPostId(id)
+    deletePost.mutate(id, {
+    onSettled: () => setDeletingPostId(null),
+  })
   }
 
   const editPost = posts.find((p:Post) => p.id === editPostId) || null
@@ -86,7 +92,7 @@ const { data: posts = [], isLoading: isLoadingPosts } = usePosts()
               body={post.body}
               onEdit={() => setEditPostId(post.id)}
               onDelete={() => handleDelete(post.id)}
-              isDeleting={deletePost.isPending}
+              isDeleting={deletingPostId === post.id}
             />
           ))}
         </ul>
